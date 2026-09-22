@@ -1,0 +1,171 @@
+[train] device=cuda amp=True
+[train] normalization stats: dims mean=[0.573  0.3439 0.2148 0.0266 0.0397 0.8804 0.0275 0.045  0.0492]
+[train] mobilenetv3_small params=1.03M size=4.11MB (fp32 weights)
+  e0 b0/48 seg=0.0300 abs=0.0256 cav=0.0002 dim=0.0085 ttl=0.0911
+  e0 b10/48 seg=0.2905 abs=0.2036 cav=0.0014 dim=0.0839 ttl=0.8140
+  e0 b20/48 seg=0.4928 abs=0.2931 cav=0.0017 dim=0.1635 ttl=1.3040
+  e0 b30/48 seg=0.6831 abs=0.3589 cav=0.0019 dim=0.2371 ttl=1.7219
+  e0 b40/48 seg=0.8574 abs=0.4068 cav=0.0020 dim=0.3094 ttl=2.0928
+[ep0] seg_iou=0.6304 dice=0.7733 cav=2.17cm abs=45.14cm plane=0.409m vol_geo=41.01L gpu=176MB t=133s
+  * best updated: val seg_iou=0.6304
+  e1 b0/48 seg=0.0160 abs=0.0026 cav=0.0000 dim=0.0075 ttl=0.0328
+  e1 b10/48 seg=0.1751 abs=0.0300 cav=0.0001 dim=0.0829 ttl=0.3549
+  e1 b20/48 seg=0.3175 abs=0.0521 cav=0.0002 dim=0.1432 ttl=0.6301
+  e1 b30/48 seg=0.4580 abs=0.0726 cav=0.0002 dim=0.1948 ttl=0.8810
+  e1 b40/48 seg=0.5883 abs=0.0851 cav=0.0003 dim=0.2520 ttl=1.1188
+[ep1] seg_iou=0.6923 dice=0.8182 cav=2.22cm abs=41.14cm plane=0.343m vol_geo=130.21L gpu=176MB t=69s
+  * best updated: val seg_iou=0.6923
+  e2 b0/48 seg=0.0113 abs=0.0010 cav=0.0000 dim=0.0045 ttl=0.0195
+  e2 b10/48 seg=0.1243 abs=0.0090 cav=0.0000 dim=0.0548 ttl=0.2228
+  e2 b20/48 seg=0.2345 abs=0.0215 cav=0.0001 dim=0.1086 ttl=0.4291
+  e2 b30/48 seg=0.3385 abs=0.0335 cav=0.0001 dim=0.1629 ttl=0.6342
+  e2 b40/48 seg=0.4375 abs=0.0449 cav=0.0002 dim=0.2081 ttl=0.8161
+[ep2] seg_iou=0.6810 dice=0.8102 cav=1.58cm abs=33.97cm plane=0.322m vol_geo=486.57L gpu=175MB t=70s
+  e3 b0/48 seg=0.0093 abs=0.0003 cav=0.0000 dim=0.0024 ttl=0.0126
+  e3 b10/48 seg=0.1005 abs=0.0096 cav=0.0000 dim=0.0530 ttl=0.1926
+  e3 b20/48 seg=0.1854 abs=0.0181 cav=0.0001 dim=0.0995 ttl=0.3575
+  e3 b30/48 seg=0.2677 abs=0.0262 cav=0.0001 dim=0.1426 ttl=0.5122
+  e3 b40/48 seg=0.3533 abs=0.0359 cav=0.0002 dim=0.1901 ttl=0.6918
+[ep3] seg_iou=0.7486 dice=0.8562 cav=1.64cm abs=26.38cm plane=0.261m vol_geo=122.45L gpu=175MB t=69s
+  * best updated: val seg_iou=0.7486
+  e4 b0/48 seg=0.0070 abs=0.0011 cav=0.0000 dim=0.0047 ttl=0.0158
+  e4 b10/48 seg=0.0871 abs=0.0114 cav=0.0000 dim=0.0529 ttl=0.1807
+  e4 b20/48 seg=0.1603 abs=0.0202 cav=0.0001 dim=0.0948 ttl=0.3306
+  e4 b30/48 seg=0.2329 abs=0.0292 cav=0.0001 dim=0.1523 ttl=0.5074
+  e4 b40/48 seg=0.3075 abs=0.0369 cav=0.0001 dim=0.1938 ttl=0.6545
+[ep4] seg_iou=0.7538 dice=0.8596 cav=2.08cm abs=25.99cm plane=0.247m vol_geo=54.19L gpu=176MB t=69s
+  * best updated: val seg_iou=0.7538
+  e5 b0/48 seg=0.0083 abs=0.0005 cav=0.0000 dim=0.0033 ttl=0.0133
+  e5 b10/48 seg=0.0771 abs=0.0107 cav=0.0000 dim=0.0479 ttl=0.1653
+  e5 b20/48 seg=0.1442 abs=0.0192 cav=0.0001 dim=0.0890 ttl=0.3107
+  e5 b30/48 seg=0.2171 abs=0.0270 cav=0.0001 dim=0.1367 ttl=0.4630
+  e5 b40/48 seg=0.2812 abs=0.0342 cav=0.0001 dim=0.1821 ttl=0.6066
+[ep5] seg_iou=0.7431 dice=0.8526 cav=1.62cm abs=27.42cm plane=0.225m vol_geo=38.72L gpu=175MB t=68s
+  e6 b0/48 seg=0.0074 abs=0.0013 cav=0.0000 dim=0.0066 ttl=0.0210
+  e6 b10/48 seg=0.0689 abs=0.0089 cav=0.0000 dim=0.0527 ttl=0.1597
+  e6 b20/48 seg=0.1302 abs=0.0162 cav=0.0001 dim=0.0910 ttl=0.2893
+  e6 b30/48 seg=0.1988 abs=0.0218 cav=0.0001 dim=0.1232 ttl=0.4109
+  e6 b40/48 seg=0.2620 abs=0.0308 cav=0.0001 dim=0.1718 ttl=0.5691
+[ep6] seg_iou=0.7345 dice=0.8470 cav=1.12cm abs=25.24cm plane=0.241m vol_geo=80.76L gpu=175MB t=68s
+  e7 b0/48 seg=0.0059 abs=0.0005 cav=0.0000 dim=0.0034 ttl=0.0106
+  e7 b10/48 seg=0.0678 abs=0.0097 cav=0.0000 dim=0.0496 ttl=0.1571
+  e7 b20/48 seg=0.1271 abs=0.0148 cav=0.0001 dim=0.0865 ttl=0.2743
+  e7 b30/48 seg=0.1861 abs=0.0207 cav=0.0001 dim=0.1235 ttl=0.3934
+  e7 b40/48 seg=0.2454 abs=0.0303 cav=0.0001 dim=0.1658 ttl=0.5358
+[ep7] seg_iou=0.7685 dice=0.8691 cav=1.19cm abs=23.52cm plane=0.203m vol_geo=45.18L gpu=175MB t=68s
+  * best updated: val seg_iou=0.7685
+  e8 b0/48 seg=0.0047 abs=0.0009 cav=0.0000 dim=0.0066 ttl=0.0174
+  e8 b10/48 seg=0.0645 abs=0.0063 cav=0.0000 dim=0.0419 ttl=0.1375
+  e8 b20/48 seg=0.1222 abs=0.0116 cav=0.0001 dim=0.0779 ttl=0.2560
+  e8 b30/48 seg=0.1776 abs=0.0178 cav=0.0001 dim=0.1122 ttl=0.3686
+  e8 b40/48 seg=0.2345 abs=0.0239 cav=0.0001 dim=0.1439 ttl=0.4793
+[ep8] seg_iou=0.7614 dice=0.8646 cav=1.25cm abs=26.46cm plane=0.228m vol_geo=66.38L gpu=176MB t=68s
+  e9 b0/48 seg=0.0050 abs=0.0004 cav=0.0000 dim=0.0023 ttl=0.0088
+  e9 b10/48 seg=0.0600 abs=0.0069 cav=0.0000 dim=0.0438 ttl=0.1409
+  e9 b20/48 seg=0.1114 abs=0.0137 cav=0.0001 dim=0.0804 ttl=0.2582
+  e9 b30/48 seg=0.1670 abs=0.0202 cav=0.0001 dim=0.1175 ttl=0.3733
+  e9 b40/48 seg=0.2219 abs=0.0257 cav=0.0001 dim=0.1503 ttl=0.4836
+[ep9] seg_iou=0.7724 dice=0.8716 cav=1.13cm abs=23.50cm plane=0.216m vol_geo=55.34L gpu=175MB t=69s
+  * best updated: val seg_iou=0.7724
+  e10 b0/48 seg=0.0072 abs=0.0005 cav=0.0000 dim=0.0034 ttl=0.0129
+  e10 b10/48 seg=0.0569 abs=0.0074 cav=0.0000 dim=0.0452 ttl=0.1330
+  e10 b20/48 seg=0.1094 abs=0.0140 cav=0.0000 dim=0.0843 ttl=0.2527
+  e10 b30/48 seg=0.1671 abs=0.0205 cav=0.0001 dim=0.1253 ttl=0.3798
+  e10 b40/48 seg=0.2152 abs=0.0268 cav=0.0001 dim=0.1624 ttl=0.4919
+[ep10] seg_iou=0.8018 dice=0.8900 cav=1.10cm abs=19.62cm plane=0.180m vol_geo=7.87L gpu=175MB t=69s
+  * best updated: val seg_iou=0.8018
+  e11 b0/48 seg=0.0048 abs=0.0003 cav=0.0000 dim=0.0028 ttl=0.0088
+  e11 b10/48 seg=0.0515 abs=0.0071 cav=0.0000 dim=0.0420 ttl=0.1243
+  e11 b20/48 seg=0.1086 abs=0.0151 cav=0.0001 dim=0.0798 ttl=0.2479
+  e11 b30/48 seg=0.1622 abs=0.0210 cav=0.0001 dim=0.1117 ttl=0.3574
+  e11 b40/48 seg=0.2145 abs=0.0279 cav=0.0001 dim=0.1477 ttl=0.4762
+[ep11] seg_iou=0.7710 dice=0.8707 cav=1.08cm abs=21.66cm plane=0.201m vol_geo=7.81L gpu=175MB t=68s
+  e12 b0/48 seg=0.0054 abs=0.0004 cav=0.0000 dim=0.0026 ttl=0.0099
+  e12 b10/48 seg=0.0550 abs=0.0074 cav=0.0000 dim=0.0418 ttl=0.1228
+  e12 b20/48 seg=0.1049 abs=0.0146 cav=0.0000 dim=0.0741 ttl=0.2304
+  e12 b30/48 seg=0.1543 abs=0.0198 cav=0.0001 dim=0.1039 ttl=0.3309
+  e12 b40/48 seg=0.2034 abs=0.0255 cav=0.0001 dim=0.1375 ttl=0.4368
+[ep12] seg_iou=0.7762 dice=0.8740 cav=1.18cm abs=21.44cm plane=0.219m vol_geo=14.15L gpu=175MB t=68s
+  e13 b0/48 seg=0.0044 abs=0.0003 cav=0.0000 dim=0.0024 ttl=0.0078
+  e13 b10/48 seg=0.0546 abs=0.0059 cav=0.0000 dim=0.0370 ttl=0.1147
+  e13 b20/48 seg=0.1017 abs=0.0110 cav=0.0000 dim=0.0689 ttl=0.2156
+  e13 b30/48 seg=0.1539 abs=0.0188 cav=0.0001 dim=0.1087 ttl=0.3410
+  e13 b40/48 seg=0.2037 abs=0.0267 cav=0.0001 dim=0.1384 ttl=0.4495
+[ep13] seg_iou=0.7924 dice=0.8842 cav=1.05cm abs=23.77cm plane=0.218m vol_geo=35.26L gpu=175MB t=68s
+  e14 b0/48 seg=0.0041 abs=0.0006 cav=0.0000 dim=0.0023 ttl=0.0081
+  e14 b10/48 seg=0.0551 abs=0.0071 cav=0.0000 dim=0.0343 ttl=0.1189
+  e14 b20/48 seg=0.1014 abs=0.0115 cav=0.0000 dim=0.0679 ttl=0.2163
+  e14 b30/48 seg=0.1500 abs=0.0192 cav=0.0001 dim=0.1041 ttl=0.3302
+  e14 b40/48 seg=0.1971 abs=0.0255 cav=0.0001 dim=0.1376 ttl=0.4365
+[ep14] seg_iou=0.7795 dice=0.8761 cav=1.02cm abs=18.62cm plane=0.169m vol_geo=11.81L gpu=175MB t=68s
+  e15 b0/48 seg=0.0034 abs=0.0004 cav=0.0000 dim=0.0028 ttl=0.0074
+  e15 b10/48 seg=0.0457 abs=0.0061 cav=0.0000 dim=0.0359 ttl=0.1057
+  e15 b20/48 seg=0.0920 abs=0.0121 cav=0.0000 dim=0.0631 ttl=0.1990
+  e15 b30/48 seg=0.1346 abs=0.0156 cav=0.0001 dim=0.0873 ttl=0.2820
+  e15 b40/48 seg=0.1791 abs=0.0215 cav=0.0001 dim=0.1164 ttl=0.3789
+[ep15] seg_iou=0.7802 dice=0.8766 cav=1.22cm abs=21.22cm plane=0.205m vol_geo=18.22L gpu=175MB t=68s
+  e16 b0/48 seg=0.0039 abs=0.0005 cav=0.0000 dim=0.0028 ttl=0.0083
+  e16 b10/48 seg=0.0513 abs=0.0048 cav=0.0000 dim=0.0322 ttl=0.1034
+  e16 b20/48 seg=0.0963 abs=0.0117 cav=0.0000 dim=0.0625 ttl=0.2045
+  e16 b30/48 seg=0.1367 abs=0.0170 cav=0.0001 dim=0.0948 ttl=0.3031
+  e16 b40/48 seg=0.1814 abs=0.0215 cav=0.0001 dim=0.1220 ttl=0.3950
+[ep16] seg_iou=0.7836 dice=0.8787 cav=1.07cm abs=26.73cm plane=0.255m vol_geo=20.41L gpu=175MB t=68s
+  e17 b0/48 seg=0.0039 abs=0.0003 cav=0.0000 dim=0.0031 ttl=0.0087
+  e17 b10/48 seg=0.0477 abs=0.0041 cav=0.0000 dim=0.0261 ttl=0.0914
+  e17 b20/48 seg=0.0929 abs=0.0096 cav=0.0000 dim=0.0550 ttl=0.1879
+  e17 b30/48 seg=0.1341 abs=0.0142 cav=0.0001 dim=0.0803 ttl=0.2697
+  e17 b40/48 seg=0.1727 abs=0.0202 cav=0.0001 dim=0.1080 ttl=0.3568
+[ep17] seg_iou=0.7733 dice=0.8722 cav=1.13cm abs=19.09cm plane=0.169m vol_geo=12.98L gpu=176MB t=71s
+  e18 b0/48 seg=0.0038 abs=0.0002 cav=0.0000 dim=0.0025 ttl=0.0074
+  e18 b10/48 seg=0.0446 abs=0.0046 cav=0.0000 dim=0.0289 ttl=0.0937
+  e18 b20/48 seg=0.0872 abs=0.0095 cav=0.0000 dim=0.0561 ttl=0.1787
+  e18 b30/48 seg=0.1313 abs=0.0143 cav=0.0001 dim=0.0780 ttl=0.2652
+  e18 b40/48 seg=0.1755 abs=0.0192 cav=0.0001 dim=0.1084 ttl=0.3621
+[ep18] seg_iou=0.7692 dice=0.8695 cav=1.03cm abs=20.20cm plane=0.175m vol_geo=25.90L gpu=175MB t=73s
+  e19 b0/48 seg=0.0034 abs=0.0006 cav=0.0000 dim=0.0031 ttl=0.0089
+  e19 b10/48 seg=0.0445 abs=0.0052 cav=0.0000 dim=0.0281 ttl=0.0918
+  e19 b20/48 seg=0.0857 abs=0.0097 cav=0.0000 dim=0.0570 ttl=0.1801
+  e19 b30/48 seg=0.1262 abs=0.0145 cav=0.0001 dim=0.0858 ttl=0.2709
+  e19 b40/48 seg=0.1682 abs=0.0186 cav=0.0001 dim=0.1134 ttl=0.3583
+[ep19] seg_iou=0.7760 dice=0.8739 cav=1.10cm abs=20.04cm plane=0.169m vol_geo=12.37L gpu=176MB t=68s
+  e20 b0/48 seg=0.0049 abs=0.0004 cav=0.0000 dim=0.0019 ttl=0.0079
+  e20 b10/48 seg=0.0468 abs=0.0062 cav=0.0000 dim=0.0353 ttl=0.1073
+  e20 b20/48 seg=0.0858 abs=0.0119 cav=0.0000 dim=0.0639 ttl=0.1964
+  e20 b30/48 seg=0.1266 abs=0.0159 cav=0.0001 dim=0.0872 ttl=0.2764
+  e20 b40/48 seg=0.1644 abs=0.0193 cav=0.0001 dim=0.1113 ttl=0.3541
+[ep20] seg_iou=0.7725 dice=0.8716 cav=1.08cm abs=20.01cm plane=0.173m vol_geo=15.26L gpu=175MB t=68s
+  e21 b0/48 seg=0.0040 abs=0.0004 cav=0.0000 dim=0.0029 ttl=0.0089
+  e21 b10/48 seg=0.0464 abs=0.0052 cav=0.0000 dim=0.0301 ttl=0.0987
+  e21 b20/48 seg=0.0841 abs=0.0089 cav=0.0000 dim=0.0511 ttl=0.1718
+  e21 b30/48 seg=0.1220 abs=0.0124 cav=0.0001 dim=0.0769 ttl=0.2521
+  e21 b40/48 seg=0.1634 abs=0.0170 cav=0.0001 dim=0.1019 ttl=0.3358
+[ep21] seg_iou=0.7773 dice=0.8747 cav=1.05cm abs=19.11cm plane=0.157m vol_geo=19.77L gpu=176MB t=68s
+  e22 b0/48 seg=0.0036 abs=0.0002 cav=0.0000 dim=0.0014 ttl=0.0060
+  e22 b10/48 seg=0.0390 abs=0.0044 cav=0.0000 dim=0.0230 ttl=0.0785
+  e22 b20/48 seg=0.0797 abs=0.0089 cav=0.0000 dim=0.0513 ttl=0.1691
+  e22 b30/48 seg=0.1213 abs=0.0133 cav=0.0001 dim=0.0749 ttl=0.2544
+  e22 b40/48 seg=0.1589 abs=0.0178 cav=0.0001 dim=0.0984 ttl=0.3297
+[ep22] seg_iou=0.7869 dice=0.8807 cav=1.07cm abs=19.98cm plane=0.171m vol_geo=17.56L gpu=175MB t=68s
+  e23 b0/48 seg=0.0042 abs=0.0003 cav=0.0000 dim=0.0015 ttl=0.0069
+  e23 b10/48 seg=0.0424 abs=0.0055 cav=0.0000 dim=0.0220 ttl=0.0835
+  e23 b20/48 seg=0.0786 abs=0.0084 cav=0.0000 dim=0.0408 ttl=0.1508
+  e23 b30/48 seg=0.1169 abs=0.0117 cav=0.0001 dim=0.0590 ttl=0.2173
+  e23 b40/48 seg=0.1568 abs=0.0164 cav=0.0001 dim=0.0819 ttl=0.2990
+[ep23] seg_iou=0.7957 dice=0.8862 cav=1.07cm abs=21.27cm plane=0.187m vol_geo=27.85L gpu=175MB t=68s
+  e24 b0/48 seg=0.0033 abs=0.0003 cav=0.0000 dim=0.0014 ttl=0.0055
+  e24 b10/48 seg=0.0396 abs=0.0039 cav=0.0000 dim=0.0227 ttl=0.0751
+  e24 b20/48 seg=0.0767 abs=0.0086 cav=0.0000 dim=0.0465 ttl=0.1503
+  e24 b30/48 seg=0.1111 abs=0.0117 cav=0.0000 dim=0.0615 ttl=0.2084
+  e24 b40/48 seg=0.1499 abs=0.0155 cav=0.0001 dim=0.0820 ttl=0.2829
+[ep24] seg_iou=0.7954 dice=0.8861 cav=1.11cm abs=19.51cm plane=0.151m vol_geo=26.45L gpu=175MB t=68s
+  e25 b0/48 seg=0.0053 abs=0.0005 cav=0.0000 dim=0.0043 ttl=0.0133
+  e25 b10/48 seg=0.0406 abs=0.0037 cav=0.0000 dim=0.0245 ttl=0.0829
+  e25 b20/48 seg=0.0784 abs=0.0089 cav=0.0000 dim=0.0534 ttl=0.1750
+  e25 b30/48 seg=0.1155 abs=0.0126 cav=0.0001 dim=0.0757 ttl=0.2483
+  e25 b40/48 seg=0.1517 abs=0.0173 cav=0.0001 dim=0.1030 ttl=0.3326
+[ep25] seg_iou=0.7840 dice=0.8789 cav=1.04cm abs=19.23cm plane=0.166m vol_geo=5.84L gpu=175MB t=68s
+[train] early stopping at epoch 25
+[train] done. best val seg_iou=0.8018
+[train] log:    D:\drone\POTHOLE_TRAINING_DATASET\multitask_model\outputs\train_log.csv
+[train] best:   D:\drone\POTHOLE_TRAINING_DATASET\multitask_model\checkpoints\best.pt
+[train] last:   D:\drone\POTHOLE_TRAINING_DATASET\multitask_model\checkpoints\last.pt

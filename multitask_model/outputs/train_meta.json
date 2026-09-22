@@ -1,0 +1,12 @@
+{
+  "params": 1027277,
+  "size_bytes": 4109108,
+  "arch": "mobilenetv3_small",
+  "pretrained_source": "MobileNet_V3_Small_Weights.IMAGENET1K_V1",
+  "resolution": [
+    512,
+    384
+  ],
+  "batch_size": 16,
+  "amp": true
+}
