@@ -216,7 +216,7 @@ function Reports() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1400px] px-5 py-12 md:px-8">
+        {/* <section className="mx-auto max-w-[1400px] px-5 py-12 md:px-8">
           <h2 className="text-lg font-medium">Per-inspection reports</h2>
           <p className="mt-1 max-w-lg text-[11px] text-subtle">
             A separate PDF is available for each completed inspection.
@@ -265,9 +265,9 @@ function Reports() {
               );
             })}
           </div>
-        </section>
+        </section> */}
 
-        <section className="mx-auto max-w-[1400px] px-5 pb-6 md:px-8">
+        {/* <section className="mx-auto max-w-[1400px] px-5 pb-6 md:px-8">
           <div className="card-panel flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h3 className="flex items-center gap-2 text-xs font-medium">
@@ -298,7 +298,7 @@ function Reports() {
             {Math.max(0, (potholes?.length ?? 0) - critical - high - unclassified)} other ) are
             computed live from the backend database — no values are invented client-side.
           </p>
-        </section>
+        </section> */}
       </main>
       <AppFooter />
     </div>
