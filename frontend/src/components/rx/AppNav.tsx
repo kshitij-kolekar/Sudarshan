@@ -7,7 +7,7 @@ const links = [
   { label: "Home", to: "/" as const },
   // { label: "Overview", to: "/dashboard" as const },
   // { label: "Inspections", to: "/" as const },
-  { label: "Map", to: "/" as const },
+  // { label: "Map", to: "/" as const },
   // { label: "Defects & Repairs", to: "/" as const },
   { label: "Reports", to: "/reports" as const },
   // { label: "Live AI View", to: "/" as const },

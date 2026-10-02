@@ -1,0 +1,56 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #F8F7F4;
+    color: #1D1F22;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Refined, thin scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F3F2EE;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D2CEC4;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B0B5BF;
+  }
+}
+
+/* Subtle engineering grid background utility */
+.bg-cad-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 227, 220, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 227, 220, 0.45) 1px, transparent 1px);
+}
+
+.bg-cad-grid-dense {
+  background-size: 16px 16px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 227, 220, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 227, 220, 0.35) 1px, transparent 1px);
+}
