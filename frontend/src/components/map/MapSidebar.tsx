@@ -45,9 +45,6 @@ export const MapSidebar: React.FC<MapSidebarProps> = ({
               Survey Telemetry Feed
             </h2>
           </div>
-          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface border border-border text-charcoal-500">
-            0 DEFECTS
-          </span>
         </div>
 
         {/* Tab switchers */}

@@ -1,5 +1,5 @@
 /**
- * SUDARSHAN — Seed / Demo Data
+ * DRONACHARYA — Seed / Demo Data
  *
  * Frontend-only demo dataset used while no live backend is connected
  * (see VITE_ENABLE_LIVE_API in src/services/apiClient.ts). Swap or
@@ -167,8 +167,8 @@ export const mockSurveys: Survey[] = [
 ];
 
 export const mockOperationalMetrics: OperationalMetrics = {
-  potholesDetected: 60,
-  roadsSurveyedKm: 74.4,
+  potholesDetected: 47820,
+  roadsSurveyedKm: 12640,
   gpsCoveragePercent: 98,
   estimatedRepairValue: 1539000,
 };

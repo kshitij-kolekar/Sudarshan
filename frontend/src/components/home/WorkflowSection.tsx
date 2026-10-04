@@ -1,50 +1,56 @@
 import React from 'react';
-import { ScanEye, MapPin, AlertTriangle, FileSpreadsheet } from 'lucide-react';
+import { ScanEye, MapPin, AlertTriangle, FileSpreadsheet,Building,List } from 'lucide-react';
 
 export const WorkflowSection: React.FC = () => {
-  const steps = [
+ const steps = [
     {
       num: '01',
-      title: 'Detect',
-      description: 'Identify road defects from survey imagery.',
+      title: 'Real-Time Detection',
+      description: 'Receive up-to-date pothole depth measurements and road condition data.',
       icon: ScanEye,
-      tag: 'OPTICAL & LIDAR',
     },
     {
       num: '02',
-      title: 'Locate',
-      description: 'Associate each defect with its geographic position.',
+      title: 'Interactive Road Map',
+      description: 'Visualize detected potholes on an interactive map with severity indicators.',
       icon: MapPin,
-      tag: 'GNSS & CHAINAGE',
     },
     {
       num: '03',
-      title: 'Prioritise',
-      description: 'Organise defects according to severity and operational importance.',
+      title: 'Detailed damage analysis',
+      description: 'Access pothole depth, width, area, and severity ratings with AI-powered assessment.',
       icon: AlertTriangle,
-      tag: 'PCI SCORING',
     },
     {
       num: '04',
-      title: 'Report',
-      description: 'Convert inspection information into structured reports.',
+      title: 'Repair cost estimates',
+      description: 'Get instant cost estimates for pothole repairs based on size and depth.',
       icon: FileSpreadsheet,
-      tag: 'WORK ORDERS',
     },
+    {
+      num: '05',
+      title: 'City-wide dashboard',
+      description: 'Monitor all road conditions across your municipality in one view.',
+      icon: Building,
+    },
+    {
+    num: '06',
+    title: 'Repair prioritization',
+    description: 'Auto-rank potholes by severity and generate work orders in real-time.',
+    icon: List,
+  },
+    
   ];
 
   return (
     <section className="py-12 border-t border-border">
-      <div className="space-y-1 mb-8">
-        <h2 className="text-2xl font-bold tracking-tight text-charcoal-900 font-sans">
-          From survey to work order.
-        </h2>
-        <p className="text-sm text-charcoal-500 max-w-xl">
-          A systematic civil engineering workflow connecting raw field capture to municipal pavement remediation.
-        </p>
+      <div className="space-y-1 mb-8 text-center">
+        <h1 className="text-6xl font-bold tracking-tight text-charcoal-900 font-sans">
+          One Dashboard. <br />Multiple Capabilities.
+        </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {steps.map((step) => {
           const Icon = step.icon;
           return (
@@ -65,10 +71,6 @@ export const WorkflowSection: React.FC = () => {
                 <p className="text-xs text-charcoal-500 leading-relaxed font-sans">
                   {step.description}
                 </p>
-              </div>
-
-              <div className="mt-6 pt-3 border-t border-border/50 text-[10px] font-mono text-charcoal-400">
-                STAGE {step.num} PIPELINE SPEC
               </div>
             </div>
           );

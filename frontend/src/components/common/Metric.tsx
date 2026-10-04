@@ -15,10 +15,8 @@ export const Metric: React.FC<MetricProps> = ({
   label,
   value,
   unit,
-  subtext,
   badge,
   badgeVariant = 'default',
-  emptyNote,
   className = '',
 }) => {
   const isValuePresent = value !== null && value !== undefined && value !== '';
@@ -34,12 +32,12 @@ export const Metric: React.FC<MetricProps> = ({
 
   return (
     <div
-      className={`bg-surface border border-border rounded-lg p-5 flex flex-col justify-between shadow-subtle hover:border-charcoal-300 transition-colors ${className}`}
+      className={`bg-transparent border-border rounded-lg p-5 flex flex-col justify-between shadow-subtle hover:border-charcoal-300 transition-colors ${className}`}
     >
-      <div className="flex items-start justify-between gap-2 mb-3">
-        <span className="text-xs font-mono uppercase tracking-wider text-charcoal-500 font-medium">
-          {label}
-        </span>
+      <div className="flex items-start justify-end gap-2 mb-3 text-right">
+        <span className="text-3xl font-mono uppercase tracking-wider text-[#E96532] font-medium">
+  {label}
+</span>
         {badge && (
           <span
             className={`text-[10px] font-mono px-1.5 py-0.5 rounded border uppercase ${badgeStyles[badgeVariant]}`}
@@ -50,24 +48,18 @@ export const Metric: React.FC<MetricProps> = ({
       </div>
 
       <div className="my-1">
-        <div className="flex items-baseline gap-1.5">
+        <div className="flex items-baseline justify-end gap-1.5 text-right">
           <span
             className={`text-2xl sm:text-3xl font-semibold tracking-tight font-mono ${
-              isValuePresent ? 'text-charcoal-900' : 'text-charcoal-400'
+              isValuePresent ? 'text-white' : 'text-charcoal-400'
             }`}
           >
             {displayValue}
           </span>
           {unit && isValuePresent && (
-            <span className="text-xs font-mono text-charcoal-500">{unit}</span>
+            <span className="text-l font-mono text-gray-400">{unit}</span>
           )}
         </div>
-      </div>
-
-      <div className="mt-2 pt-2 border-t border-border/60">
-        <p className="text-[11px] text-charcoal-400 font-sans leading-relaxed">
-          {emptyNote ? emptyNote : subtext || 'Awaiting live survey telemetry'}
-        </p>
       </div>
     </div>
   );

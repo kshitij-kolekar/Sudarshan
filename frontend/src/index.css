@@ -12,15 +12,75 @@ body,
   margin: 0;
 }
 
+/* ------------------------------------------------------------------
+ * THEME TOKENS
+ * Values are space-separated RGB channels so Tailwind opacity modifiers
+ * keep working (bg-terracotta/20, border-border/50, ...).
+ *
+ * Light is the default. Dark applies automatically when the OS/browser
+ * is set to dark (prefers-color-scheme). To force dark while developing,
+ * change the media query line below to:  @media all {
+ * ------------------------------------------------------------------ */
 @layer base {
-  :root {
-    color-scheme: light;
-  }
   
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+
+      /* Layered blacks: each step up is clearly visible against the one below */
+      --canvas:           16  16  17;  /* #101011 page */
+      --surface:          24  24  26;  /* #18181A cards, header */
+      --surface-subtle:   32  32  35;  /* #202023 hover, tags, inputs */
+
+      --border:           48  48  52;  /* #303034 */
+      --border-strong:    68  68  73;  /* #444449 */
+
+      /* scale is inverted so text utilities (text-charcoal-*) flip automatically */
+      --charcoal-900:    245 244 241;  /* #F5F4F1 */
+      --charcoal:        232 230 226;  /* #E8E6E2 */
+      --charcoal-700:    200 198 194;  /* #C8C6C2 */
+      --charcoal-600:    166 164 160;  /* #A6A4A0 */
+      --charcoal-500:    136 134 131;  /* #888683 */
+      --charcoal-400:    106 105 103;  /* #6A6967 */
+      --charcoal-300:     78  79  81;  /* #4E4F51 */
+
+      /* same orange family as light, lifted slightly for dark backgrounds */
+      --terracotta:        219  92  50;  /* #DB5C32 */
+      --terracotta-hover:  232 112  72;  /* #E87048 */
+      --terracotta-light:   46  27  20;  /* #2E1B14 */
+      --terracotta-border: 107  51  32;  /* #6B3320 */
+
+      --forest:             79 154 112;  /* #4F9A70 */
+      --forest-hover:       98 173 131;  /* #62AD83 */
+      --forest-light:       22  38  30;  /* #16261E */
+      --forest-border:      49  92  67;  /* #315C43 */
+
+      /* amber now maps to terracotta */
+      --amber-subtle:       46  27  20;  /* #2E1B14 */
+      --amber-border:      107  51  32;  /* #6B3320 */
+      --amber-text:        240 136  98;  /* #F08862 */
+
+      --shadow-rgb:          0   0   0;
+      --grid-alpha:          0.7;
+      --grid-alpha-dense:    0.5;
+      --map-tile-filter: invert(1) hue-rotate(180deg) brightness(0.88) contrast(0.9) saturate(0.6);
+    }
+  }
+
+  * {
+    border-color: rgb(var(--border));
+  }
+
   body {
-    background-color: #F8F7F4;
-    color: #1D1F22;
+    background-color: rgb(var(--canvas));
+    color: rgb(var(--charcoal));
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background: rgb(var(--terracotta));
+    color: #fff;
   }
 
   /* Refined, thin scrollbar */
@@ -29,28 +89,68 @@ body,
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #F3F2EE;
+    background: rgb(var(--surface-subtle));
   }
   ::-webkit-scrollbar-thumb {
-    background: #D2CEC4;
+    background: rgb(var(--border-strong));
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #B0B5BF;
+    background: rgb(var(--charcoal-300));
   }
 }
 
 /* Subtle engineering grid background utility */
 .bg-cad-grid {
   background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(229, 227, 220, 0.45) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(229, 227, 220, 0.45) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, rgb(var(--border) / var(--grid-alpha)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--border) / var(--grid-alpha)) 1px, transparent 1px);
 }
 
 .bg-cad-grid-dense {
   background-size: 16px 16px;
-  background-image: 
-    linear-gradient(to right, rgba(229, 227, 220, 0.35) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(229, 227, 220, 0.35) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, rgb(var(--border) / var(--grid-alpha-dense)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--border) / var(--grid-alpha-dense)) 1px, transparent 1px);
+}
+
+/* ------------------------------------------------------------------
+ * Leaflet, themed through the same tokens
+ * ------------------------------------------------------------------ */
+.leaflet-tile-pane {
+  filter: var(--map-tile-filter);
+}
+
+.leaflet-container {
+  background: rgb(var(--canvas));
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: rgb(var(--surface));
+  color: rgb(var(--charcoal));
+  border: 1px solid rgb(var(--border));
+}
+
+.leaflet-bar a,
+.leaflet-control-layers {
+  background-color: rgb(var(--surface));
+  color: rgb(var(--charcoal));
+  border-color: rgb(var(--border));
+}
+
+.leaflet-bar a:hover {
+  background-color: rgb(var(--surface-subtle));
+  color: rgb(var(--charcoal));
+}
+
+.leaflet-control-attribution {
+  background: rgb(var(--canvas) / 0.75);
+  color: rgb(var(--charcoal-500));
+}
+
+.leaflet-control-attribution a {
+  color: rgb(var(--charcoal-700));
 }

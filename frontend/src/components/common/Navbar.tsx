@@ -55,11 +55,11 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div className="flex flex-col leading-none">
-              <span className="text-base font-bold tracking-tight text-charcoal-900 font-sans">
-                SUDARSHAN
+              <span className="text-base font-bold tracking-tight text-white font-sans">
+                DRONACHARYA
               </span>
 
-              <span className="text-[9px] font-mono tracking-widest text-charcoal-400 uppercase mt-0.5">
+              <span className="text-[9px] font-mono tracking-widest text-white uppercase mt-0.5">
                 ROAD INTELLIGENCE
               </span>
             </div>
@@ -80,8 +80,8 @@ export const Navbar: React.FC = () => {
                   to={link.path}
                   className={`px-3.5 py-1.5 rounded text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-charcoal-900 bg-surface-subtle border border-border/80 shadow-xs'
-                      : 'text-charcoal-500 hover:text-charcoal-900 hover:bg-surface-subtle/50'
+  ? 'text-white bg-surface-subtle border border-border/80 shadow-xs'
+  : 'text-white hover:text-white hover:bg-surface-subtle/50'
                   }`}
                 >
                   {link.name}
@@ -135,8 +135,8 @@ export const Navbar: React.FC = () => {
                 }
                 className={`block px-3 py-2 rounded text-sm font-medium transition-colors ${
                   isActive
-                    ? 'text-charcoal-900 bg-surface-subtle font-semibold'
-                    : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-surface-subtle/60'
+  ? 'text-white bg-surface-subtle font-semibold'
+  : 'text-white hover:text-white hover:bg-surface-subtle/60'
                 }`}
               >
                 {link.name}

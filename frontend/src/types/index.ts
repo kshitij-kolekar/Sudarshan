@@ -1,5 +1,5 @@
 /**
- * SUDARSHAN - Core Domain Types & Data Contracts
+ * DRONACHARYA - Core Domain Types & Data Contracts
  * Designed for municipal road-operations and GIS field survey telemetry.
  */
 

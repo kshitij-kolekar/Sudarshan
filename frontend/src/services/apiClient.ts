@@ -1,5 +1,5 @@
 /**
- * SUDARSHAN API Client Base
+ * DRONACHARYA API Client Base
  * Prepared for future integration with municipal road-operations REST/GraphQL backend.
  */
 import {
